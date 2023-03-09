@@ -6,11 +6,10 @@
 
 # Sieve of Eratosthenes
 
+sum = 0
 
-def writeprime(x):
-    file = open('primes.txt','a')
-    file.write(x+"\n")
-    file.close()
+with open('primes.txt') as primes:
+    for line in primes:
+        sum = sum + int(line)
 
-x = str(3)
-writeprime(x)
+print(sum)
